@@ -7,17 +7,31 @@
 <script type="text/babel">
 const rootElement = document.getElementById('root')
 
+// 1.
+// function Message ({message}) {
+//   if(!message) {
+//     return <div>No Message</div>
+//   }
+//   return (
+//     <div>
+//       {message}
+//     </div>
+//   )
+// }
 
 function Message ({message}) {
-
   if(!message) {
-    return <div>No Message</div>
+    return React.createElement(
+              'div',
+              null,
+              'No Message'
+            )
   }
-  return (
-    <div>
-      {message}
-    </div>
-  )
+  return React.createElement(
+            'div',
+            null,
+            message
+          )
 }
 
 
