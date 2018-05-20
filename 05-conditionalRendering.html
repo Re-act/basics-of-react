@@ -10,7 +10,9 @@ const rootElement = document.getElementById('root')
 
 function Message ({message}) {
 
-
+  if(!message) {
+    return <div>No Message</div>
+  }
   return (
     <div>
       {message}
