@@ -3,7 +3,7 @@
 <script src="http://unpkg.com/react@16.0.0/umd/react.development.js"></script>
 <script src="http://unpkg.com/react-dom@16.0.0/umd/react-dom.development.js"></script>
 <script src="https://unpkg.com/babel-standalone@6.26.0/babel.min.js"></script>
-
+<script src="https://unpkg.com/prop-types@15.6/prop-types.js"></script>
 <script type="text/babel">
 const rootElement = document.getElementById('root')
 
@@ -16,6 +16,7 @@ function SayHello (props) {
   )
 }
 
+// 1.
 // SayHello.propTypes = {
 //   firstName(props, propName, componentName) {
 //     if(typeof props[propName] !== 'string') {
@@ -24,13 +25,15 @@ function SayHello (props) {
 //   }
 // }
 
-const PropTypes = {
-  string (props, propName, componentName) {
-    if(typeof props[propName] !== 'string') {
-      return new Error(`Hey, you should pass a string for ${propName} in ${componentName} but you passed the type ${typeof props[propName]}`)
-    }
-  }
-}
+
+// 2.
+// const PropTypes = {
+//   string (props, propName, componentName) {
+//     if(typeof props[propName] !== 'string') {
+//       return new Error(`Hey, you should pass a string for ${propName} in ${componentName} but you passed the type ${typeof props[propName]}`)
+//     }
+//   }
+// }
 
 SayHello.propTypes = {
   firstName: PropTypes.string,
