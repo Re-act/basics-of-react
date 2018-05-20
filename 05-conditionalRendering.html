@@ -36,14 +36,30 @@ const rootElement = document.getElementById('root')
 //           )
 // }
 
+// 3.
+// function Message ({message}) {
+//   return message
+//           ? React.createElement('div', null, message)
+//           : React.createElement(
+//               'div',
+//               null,
+//               'No Message'
+//             )
+// }
+
+
 function Message ({message}) {
-  return message
-          ? React.createElement('div', null, message)
-          : React.createElement(
-              'div',
-              null,
-              'No Message'
-            )
+  return <div>
+          {
+            message
+            ? React.createElement('div', null, message)
+            : React.createElement(
+                'div',
+                null,
+                'No Message'
+              )
+          }
+         </div>
 }
 
 
