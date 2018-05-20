@@ -18,10 +18,16 @@ const rootElement = document.getElementById('root')
 
 const message = (props) => <div>{props.msg}</div>
 
+// const domElement = (
+//   <div className="container">
+//     {message({ msg: 'Hello World' })}
+//     {message({ msg: 'Goodbye World' })}
+//   </div>
+// )
 const domElement = (
   <div className="container">
-    {message({ msg: 'Hello World' })}
-    {message({ msg: 'Goodbye World' })}
+    {React.createElement(message, {msg: 'Hello World'})}
+    {React.createElement(message, {msg: 'Goodbye World'})}
   </div>
 )
 console.log(domElement)
