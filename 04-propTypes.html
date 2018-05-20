@@ -16,6 +16,14 @@ function SayHello (props) {
   )
 }
 
+// SayHello.propTypes = {
+//   firstName(props, propName, componentName) {
+//     if(typeof props[propName] !== 'string') {
+//       return new Error(`Hey, you should pass a string for ${propName} in ${componentName} but you passed the type ${typeof props[propName]}`)
+//     }
+//   }
+// }
+
 const PropTypes = {
   string (props, propName, componentName) {
     if(typeof props[propName] !== 'string') {
