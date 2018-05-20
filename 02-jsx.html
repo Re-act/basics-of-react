@@ -14,8 +14,9 @@ const rootElement = document.getElementById('root')
 // )
 
 const string = 'Hello World'
+const myClassName = 'container'
 // const domElement = <div className="container">{ string }</div>
-const domElement = <div className="container">{ (() => string)() }</div>
+const domElement = <div className={myClassName + '__hi-there'}>{ (() => string)() }</div>
 console.log(domElement)
 
 ReactDOM.render(domElement, rootElement)
