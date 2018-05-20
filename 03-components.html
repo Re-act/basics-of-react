@@ -16,7 +16,7 @@ const rootElement = document.getElementById('root')
 //   </div>
 // )
 
-const message = (props) => <div>{props.msg}</div>
+const Message = (props) => <div>{props.msg}</div>
 
 // 2.
 // const domElement = (
@@ -34,9 +34,16 @@ const message = (props) => <div>{props.msg}</div>
 //   </div>
 // )
 
+// const domElement = (
+//   <div className="container">
+//     <message msg="Hello World"/> (Doesn't work as small html tags denote the predefined one. So, we need to make use of the capitalised tags)
+//   </div>
+// )
+
 const domElement = (
   <div className="container">
-    <message msg="Hello World"/>
+    <Message msg="Hello World"/>
+    <Message msg="Goodbye World"/>
   </div>
 )
 
