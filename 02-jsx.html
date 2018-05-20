@@ -1,0 +1,21 @@
+<div id="root"></div>
+
+<script src="http://unpkg.com/react@16.0.0/umd/react.production.min.js"></script>
+<script src="http://unpkg.com/react-dom@16.0.0/umd/react-dom.production.min.js"></script>
+<script src="https://unpkg.com/babel-standalone@6.26.0/babel.min.js"></script>
+
+<script type="text/babel">
+const rootElement = document.getElementById('root')
+
+// const domElement = React.createElement(
+//   'div', //element type
+//   {className: 'container', //props
+//   children: ['Hello World', 'Goodbye World']}, //props
+// )
+
+const domElement = <div className="container">Hello World</div>
+
+console.log(domElement)
+
+ReactDOM.render(domElement, rootElement)
+</script>
