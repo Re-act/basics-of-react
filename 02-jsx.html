@@ -21,8 +21,12 @@ const props = {
 }
 // const domElement = <div className="container">{ string }</div>
 // const domElement = <div className={myClassName + '__hi-there'}>{ (() => string)() }</div>
+// const domElement = (
+//   <div {...props} />
+// )
+
 const domElement = (
-  <div {...props} />
+  <div {...props} className="my-class" />
 )
 
 console.log(domElement)
